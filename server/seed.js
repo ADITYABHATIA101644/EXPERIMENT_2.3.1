@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const MONGO_URI = 'mongodb+srv://Aditya:Aadi010.@cluster0.g0l9d0y.mongodb.net/shopDB';
+const MONGO_URI = 'mongodb+srv://Aditya:Aadi010.@cluster0.g0l9d0y.mongodb.net/?appName=Cluster0';
 
 mongoose.connect(MONGO_URI);
 
