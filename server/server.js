@@ -14,11 +14,17 @@ mongoose.connect(MONGO_URI)
     .catch(err => console.log("DB Error: ", err));
 
 // Product Schema
+const variantSchema = new mongoose.Schema({
+    sku: String,
+    color: String,
+    price: Number,
+    stock: Number
+});
+
 const productSchema = new mongoose.Schema({
     name: String,
-    price: Number,
-    description: String,
-    category: String
+    category: String,
+    variants: [variantSchema] // This tells Mongoose to expect an array of objects
 });
 const Product = mongoose.model('Product', productSchema);
 
